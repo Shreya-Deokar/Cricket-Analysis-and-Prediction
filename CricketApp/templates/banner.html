@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/banner.css' %}">
+    <title>Prediction</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-danger ">
+        <div class="container-fluid justify-content-center">
+          <h3 class="navbar-brand mb-0 h3 text-light ">Select from Below for Prediction</h3>
+        </div>
+      </nav>
+
+    <div class="mt-4">
+        <!-- IPL Banner - 1 -->
+        <div class="ipl-banner-left mt-5">
+
+            <div class="slider-frame mb-5">
+                <div class="slide-images-up">
+
+                    <!-- Image-1 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l1.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-2 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l2.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-3 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l3.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-4 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l4.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-5 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l8.png' %}"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-6 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l5.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-7 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l6.png' %}" style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-8 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l7.png' %}"style="height:300px;width:250px;">
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+      <div class="mt-4">
+
+        <div class='ipl-banner-right mt-5'>
+
+            <div class="slider-frame">
+                <div class="slide-images-down">
+
+                    <!-- Image-1 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l1.png' %}" alt="Mumbai Indians"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-2 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l2.png' %}" alt="Sunrisers Hyderabad"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-3 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l3.png' %}" alt="Royal Challengers Bangalore"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-4 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l4.png' %}" alt="Delhi Capitals"style="height:300px;width:250px;">
+                    </div>
+                    <!-- Image-5 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l5.png' %}" alt="Kolkata Knight Riders"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-6 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l6.png' %}" alt="Rajasthan Royals"style="height:450px;width:250px;">
+                    </div>
+                    <!-- Image-7 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l7.png' %}" alt="Kings XI Punjab"style="height:350px;width:250px;">
+                    </div>
+                    <!-- Image-8 -->
+                    <div class="image-container">
+                        <img class="image-width" src="{%static 'image/l8.png' %}" alt="Chennai Super Kings"style="height:450px;width:250px;">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="predict-form m-5">
+        <br><br>
+
+  <form action="PredictionGraph" method="post">{% csrf_token %}
+      <button type="submit" class="btn btn-primary p-3" href="/PredictionGraph">Predict Match Winner With Toss Winner</button>
+  </form>
+  <br><br>
+  <form action="PredictionGraph1" method="post">{% csrf_token %}
+      <button type="submit" class="btn btn-primary p-4" href="/PredictionGraph1">Predict Match Winner on Venue</button>
+  </form>
+  <br><br>
+  <form action="PredictionGraph2" method="post">{% csrf_token %}
+      <button type="submit" class="btn btn-primary p-4 " href="/PredictionGraph2">Predict Toss Decision</button>
+  </form>
+
+</div>
+</body>
+</html>
